@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leadership Consultant focusing on psychology.">
+    <meta name="keywords" content="Leadership, Psychology, Consultant">
+    <meta name="Internaut.dev" content="Peter">
+    <title>GRANHOFJUHL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF9F2; /* Soft Light Cream */
+            color: #5C4033; /* Warm Earthy Brown */
+
+        }
+        .page-container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+
+        }
+        /* Left Section (Static) */
+        .left-section {
+            width: 25%;
+            background-color: #4B5320; /* Deep Olive Green */
+            opacity: 0.7;
+            background-image: url(https://picsum.photos/id/600/1200/1200?grayscale&blur=2);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: fixed;
+            height: 100%;
+        }
+        .left-section h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #FFF9F2;
+        }
+        .left-section p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #F4E1D2;
+        }
+        .left-section a {
+            font-weight: 500;
+            color: #D35400; /* Muted Burnt Orange */
+            text-decoration: none;
+        }
+        .left-section a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: auto;
+        }
+        .social-links a {
+            display: inline;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .social-links i {
+            display: inline;
+        }
+
+        /* Right Section (Scrollable) */
+        .right-section {
+            margin-left: 25%;
+            width: 75%;
+            padding: 40px;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        .intro-text {
+            margin-bottom: 50px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #5C4033;
+            margin-top: 25%;
+        }
+        /* 6 Box Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .grid-box {
+            background-color: #D35400; /* Muted Burnt Orange */
+            opacity: 0.8;
+            background-image: url(https://picsum.photos/id/870/200/300?grayscale&blur=2);
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .grid-box:hover {
+            transform: scale(1.05);
+            background-color: #5C4033; /* Darker earthy brown on hover */
+        }
+
+        /* Modal Overlay and Modal Box */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            width: 60%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .modal-box img {
+            width: 40%;
+            border-radius: 8px;
+        }
+        .modal-box .modal-text {
+            width: 55%;
+            padding-left: 20px;
+            color: #5C4033;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #D35400; /* Muted Burnt Orange */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* Blur Effect on Main Content */
+        .blurred {
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    <!-- Left Section -->
+    <div class="left-section">
+        <div>
+            <h1>GRANHOFJUHL</h1>
+            <p>Empowering leaders through the lens of psychology. Discover insights and strategies to grow as a leader.</p>
+        </div>
+        <div class="social-links">
+            <p>Kontakt:</p>
+            <p> Skovagervej 8 <br> 8240 Risskov <br>kontakt@granhofjuhl.dk</p>
+            <p>
+            <a href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+    </p>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="intro-text">
+            <p> 
+Formålet med Granhof Juhl ApS er, på baggrund af en etisk og teoretisk velfunderet praksis, at skabe værdifulde og brugbare forskelle og resultater for de organisationer og samarbejdspartnere, som Granhof Juhl ApS arbejder med.</p>
+
+<p>Hvis du ønsker at modtage en mail, når nye artikler, materialer og informationer lægges på hjemmesiden, kan du sende en mail til kontakt(at)granhofjuhl.dk med emnet "artikler og materiale".</p>
+
+ 
+
+<p>Andreas Granhof Juhl er yderligere partner i to firmaer.
+
+OVAM ApS laver digitale løsninger der understøtter nye strategier, der kræver nye systemer. F.eks. strategier for rehabilitering og inklusion. Se www.ovam.dk 
+
+AGORA arbejder med større organisations- og lederudviklingsprojekter. Se www.agora.as</p>
+
+        </div>
+
+        <!-- 6 Box Grid -->
+        <div class="grid">
+            <div class="grid-box" onclick="openModal(1)">LEDERUDDANNELSER</div>
+            <div class="grid-box" onclick="openModal(2)">ORGANISATIONSUDVIKLING</div>
+            <div class="grid-box" onclick="openModal(3)">TEMADAGE/WORKSHOPS</div>
+            <div class="grid-box" onclick="openModal(4)">COACHING</div>
+            <div class="grid-box" onclick="openModal(5)">KONFLIKTHÅNDTERING</div>
+            <div class="grid-box" onclick="openModal(6)">UDTALELSER</div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Section -->
+<div id="modal" class="modal-overlay">
+    <div class="modal-box">
+        <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="Leadership Image">
+        <div class="modal-text">
+            <h2>Leadership Insight</h2>
+            <p>This is an in-depth description of the leadership insight. Here you can talk about the principles of leadership, psychology, and how this insight helps leaders grow.</p>
+        </div>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script>
+    function openModal(boxNumber) {
+        document.querySelector('.right-section').classList.add('blurred');
+        document.getElementById('modal').style.display = 'flex';
+        // You can customize the modal content based on which box was clicked
+    }
+
+    function closeModal() {
+        document.querySelector('.right-section').classList.remove('blurred');
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
